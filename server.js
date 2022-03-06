@@ -1,7 +1,6 @@
 const indexRoute = require("./routes/htmlRoutes");
-const apiRoute = require("./routes/apiRoutes/notesRoutes");
+const apiRoute = require("./routes/apiRoutes");
 const express = require("express");
-
 
 const PORT = process.env.PORT || 3001;
 
@@ -12,6 +11,8 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
+
+// function to make new note
 
 app.use("/api", apiRoute);
 app.use("/", indexRoute);
