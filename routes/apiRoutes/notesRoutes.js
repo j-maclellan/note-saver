@@ -9,11 +9,6 @@ router.get("/notes", (req, res) => {
     res.json(notes);
 });
 
-// router.get("/notes/:id", (req, res) => {
-//     const result = findById(req.params.id, notes);
-//     res.json(result);
-// });
-
 router.post("/notes", (req, res) => {
     // give notes an id
     req.body.id = generateUniqueId({
@@ -37,4 +32,5 @@ router.delete("/notes/:id", (req, res) => {
     res.json(result);
     console.log("success!");
 });
+
 module.exports = router;

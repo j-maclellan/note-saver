@@ -12,8 +12,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
 
-// function to make new note
-
 app.use("/api", apiRoute);
 app.use("/", indexRoute);
 
